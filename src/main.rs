@@ -16,6 +16,7 @@ pub trait GenericMap<K, V> {
 
 /// Idea 2. separate getter/setter
 /// This would work if you want to implement it for things like Box<[Value]>
+/// I think you can even go as far as to seperate them into smaller pieces
 pub trait ReadGenericMap<K, V> {
     fn get(&self, key: &K) -> Option<&V>;
     fn get_mut(&mut self, key: &K) -> Option<&mut V>;
